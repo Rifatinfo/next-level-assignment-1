@@ -20,9 +20,6 @@ type UserKeys = keyof User; `
 
 ---
 
-
-
-
 ## Use Cases
 
 ### 1. Input to keys of an object
@@ -35,8 +32,6 @@ const user = {id: 1, name : "Zara" , email : 'zara@gmail.com'};
 const name = getValue(user, 'name'); `
 
 ---
-
-
 ## 2. Mapped Types
 
 `type UserStringMap = {
@@ -47,9 +42,35 @@ const name = getValue(user, 'name'); `
 
 type UserStringMap = {
     [k in keyof User] : string
-}; 
-`
+}; `
 
 ---
 
 ## Understanding TypeScript `interface` and `type`
+
+### 1. Interface
+interface when working with object structures 
+
+### 2. Type
+type when defining primitive aliases, union types There are three main primitives and TypeScript.
+
+ . boolean - true or false values
+ . number - whole numbers and floating point values
+ . string - text values like "TypeScript Rocks"
+
+```interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+interface Admin extends User {
+  role: string;
+}
+const admin: Admin = {
+  id: 1,
+  name: "Zara",
+  email: "zara@gmail.com",
+  role: "superadmin"
+};
+
