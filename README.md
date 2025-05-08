@@ -16,23 +16,25 @@ This keyof used to get a union of all property names (keys) of a given type or i
   email: string;
 }
 
-type UserKeys = keyof User; ```
+type UserKeys = keyof User; 
+
+---
 
 ## Use Cases
 
 ### 1. Input to keys of an object
 
-function getValue<T, K extends keyof T> (obj: T , key:K) : T[K] {
+```function getValue<T, K extends keyof T> (obj: T , key:K) : T[K] {
     return obj[key];
 }
 
 const user = {id: 1, name : "Zara" , email : 'zara@gmail.com'};
 const name = getValue(user, 'name'); 
 
-
+---
 ## 2. Mapped Types
 
-type UserStringMap = {
+```type UserStringMap = {
     id: string;
     name : string;
     email : string
