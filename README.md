@@ -22,17 +22,17 @@ type UserKeys = keyof User; ```
 
 ### 1. Input to keys of an object
 
-```function getValue<T, K extends keyof T> (obj: T , key:K) : T[K] {
+function getValue<T, K extends keyof T> (obj: T , key:K) : T[K] {
     return obj[key];
 }
 
 const user = {id: 1, name : "Zara" , email : 'zara@gmail.com'};
-const name = getValue(user, 'name'); ```
+const name = getValue(user, 'name'); 
 
 
 ## 2. Mapped Types
 
-``` type UserStringMap = {
+type UserStringMap = {
     id: string;
     name : string;
     email : string
@@ -40,8 +40,7 @@ const name = getValue(user, 'name'); ```
 
 type UserStringMap = {
     [k in keyof User] : string
-}; ```
+}; 
 
 
-
-
+## Understanding TypeScript `interface` and `type`
