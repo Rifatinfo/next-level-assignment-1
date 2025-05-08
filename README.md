@@ -10,13 +10,13 @@ This is a TypeScript core problem-solving task aimed at gaining a deeper underst
 Keyof is a keyword in typescript and keyof operator take an object type and produces a string . It work to object key value and show its value .
 This keyof used to get a union of all property names (keys) of a given type or interface . let's example `// Result: "id" | "name" | "email"`
 
-`interface User {
+```interface User {
   id: number;
   name: string;
   email: string;
 }
 
-type UserKeys = keyof User; `
+type UserKeys = keyof User;
 
 ---
 
