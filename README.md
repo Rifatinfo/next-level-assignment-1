@@ -42,5 +42,6 @@ type UserStringMap = {
     [k in keyof User] : string
 }; 
 
+---
 
 ## Understanding TypeScript `interface` and `type`
