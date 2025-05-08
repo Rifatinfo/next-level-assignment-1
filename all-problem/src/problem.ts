@@ -61,3 +61,46 @@ function getDayType(day: Day): string {
     }
 }
 
+function formatString(params1: string, params2?: boolean) : string {
+    if ((params2 === true) || (typeof params2 === 'undefined')) {
+       return params1.toUpperCase();
+    }else{
+        return params1.toLowerCase();
+    }
+}
+
+type ItemProperties = {
+    title: string; 
+    rating: number 
+}
+function filterByRating(items: ItemProperties []): ItemProperties [] {
+  const filterRating = items.filter( fil  => fil.rating >= 4 );
+  return filterRating;
+}
+
+function concatenateArrays<T > ( firstArray : T[], ...restArrays : T[][]): T[] {
+    const concatenatedArray: T[] = firstArray.concat(...restArrays);
+    return concatenatedArray;
+}
+
+class Vehicle {
+
+    constructor(private make: string, public year: number) {
+        this.make = make;
+        this.year = year
+    }
+
+    getInfo() {
+        console.log(`Make ${this.make}, Year : ${this.year}`)
+    }
+}
+
+class Car extends Vehicle {
+    constructor( make: string, year: number, private model: string,) {
+        super(make, year);
+    }
+    getModel() {
+        console.log(`Model: ${this.model}`)
+    }
+}
+
