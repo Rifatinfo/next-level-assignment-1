@@ -16,7 +16,7 @@ This keyof used to get a union of all property names (keys) of a given type or i
   email: string;
 }
 
-type UserKeys = keyof User; 
+type UserKeys = keyof User; ```
 
 ## Use Cases
 
@@ -27,7 +27,7 @@ type UserKeys = keyof User;
 }
 
 const user = {id: 1, name : "Zara" , email : 'zara@gmail.com'};
-const name = getValue(user, 'name');
+const name = getValue(user, 'name'); ```
 
 
 ## 2. Mapped Types
@@ -40,7 +40,7 @@ const name = getValue(user, 'name');
 
 type UserStringMap = {
     [k in keyof User] : string
-};
+}; ```
 
 
 
