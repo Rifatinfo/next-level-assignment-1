@@ -10,13 +10,13 @@ This is a TypeScript core problem-solving task aimed at gaining a deeper underst
 Keyof is a keyword in typescript and keyof operator take an object type and produces a string . It work to object key value and show its value .
 This keyof used to get a union of all property names (keys) of a given type or interface . let's example `// Result: "id" | "name" | "email"`
 
-```interface User {
+`interface User {
   id: number;
   name: string;
   email: string;
 }
 
-type UserKeys = keyof User; 
+type UserKeys = keyof User; `
 
 ---
 
@@ -27,19 +27,19 @@ type UserKeys = keyof User;
 
 ### 1. Input to keys of an object
 
-function getValue<T, K extends keyof T> (obj: T , key:K) : T[K] {
+`function getValue<T, K extends keyof T> (obj: T , key:K) : T[K] {
     return obj[key];
 }
 
 const user = {id: 1, name : "Zara" , email : 'zara@gmail.com'};
-const name = getValue(user, 'name'); 
+const name = getValue(user, 'name'); `
 
 ---
 
 
 ## 2. Mapped Types
 
-type UserStringMap = {
+`type UserStringMap = {
     id: string;
     name : string;
     email : string
@@ -48,7 +48,7 @@ type UserStringMap = {
 type UserStringMap = {
     [k in keyof User] : string
 }; 
-
+`
 
 ---
 
